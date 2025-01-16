@@ -1,6 +1,6 @@
-# 🎥 Movie_Reservation 
+# 🎥 영화 서비스 SQL문 실전 예제 만들기 프로젝트
 
-## **🔍 📂 프로젝트 주제**
+## **📂 프로젝트 주제**
 
 🎬 영화 예매자 데이터를 활용한 사용자 데이터 분석 및 자동화된 마케팅 서비스 쿼리문 개발
 
@@ -40,7 +40,7 @@
       </td>
       <td align="center">
         <a href="https://github.com/Jeongho427">
-          <img src="=" width="150px;" alt=""/>
+          <img src="https://avatars.githubusercontent.com/u/60309978?v=4" width="150px;" alt=""/>
           <br /><sub><b> 박정호 </b></sub>
         </a>
         <br />

@@ -16,21 +16,21 @@
   <tbody>
     <tr>
       <td align="center">
-         <a href="=">
-          <img src="=" width="150px;" alt=""/>
+         <a href="https://github.com/kcklkb">
+          <img src="https://avatars.githubusercontent.com/u/40711682?v=4" width="150px;" alt=""/>
           <br /><sub><b> 김창규 </b></sub>
         </a>
         <br />
       </td>
       <td align="center">
-          <a href="=">
-          <img src="=" width="150px;" alt=""/>
+          <a href="https://github.com/BlueRedOrange">
+          <img src="https://avatars.githubusercontent.com/u/129985846?v=4" width="150px;" alt=""/>
           <br /><sub><b> 정파란 </b></sub>
         </a>
         <br />
       </td>
       <td align="center">
-        <a href="=">
+        <a href="https://github.com/Jeongho427">
           <img src="=" width="150px;" alt=""/>
           <br /><sub><b> 박정호 </b></sub>
         </a>

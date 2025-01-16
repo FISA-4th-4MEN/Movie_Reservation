@@ -56,7 +56,20 @@
 
 <details>
 <summary>예시 답안</summary>
+  
+```sql
 
+SELECT u.name, u.email, mr.theater, mr.room_num, mr.seat_num, mr.movie_date
+FROM user u
+JOIN movie_reservation mr ON u.user_id = mr.user_id
+WHERE
+    mr.room_num = 1
+    AND mr.seat_num REGEXP '[A-Z]1$'  -- 좌석 번호 끝자리가 1인 것만
+    AND DAY(mr.movie_date) = 1;  -- 영화 날짜가 1일인 예매 정보
+
+```
+
+</details>
 
 
 ### 2. 2025년 2월에 상영하는 경찰 영화 검색
@@ -66,12 +79,39 @@
 
 ![image](https://github.com/user-attachments/assets/3c1abee0-efed-4273-a7ca-d83546b45f97)
 
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT m.title AS movie_title
+FROM movie_info m
+JOIN movie_reservation r ON m.info_id = r.info_id
+WHERE r.movie_date REGEXP '^2025-02' -- 상영 날짜가 2025-2월인 데이터
+AND m.synopsis REGEXP '경찰'; -- synopsis에 "경찰"이 포함된 영화
+
+```
+
+</details>
 
 ### 3. 네이버 이메일 사용자들 대상으로 연락처로 할인 정보 전송
 - 네이버 페이 결제 사용자들에게 할인을 제공합니다.
 - 출력 예시
 
 ![image](https://github.com/user-attachments/assets/2770dfd6-240a-4f51-a731-3aa58501ef58)
+
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT mi.name, mi.phone, mi.email
+FROM user mi
+WHERE mi.email REGEXP '@naver\.com$';  -- 이메일이 naver.com으로 끝나는 사용자들
+
+```
+
+</details>
 
 
 ### 4. 특정기간(정규표현식으로 표현)동안 가장 예매가 많이 된 영화 이름과 예매 건수 출력
@@ -81,6 +121,24 @@
 
 ![image](https://github.com/user-attachments/assets/77b801bc-d836-4db4-a50f-fc38e52d61d7)
 
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT m.title, COUNT(r.reservation_id) AS reservation_count
+FROM movie_info m
+JOIN movie_reservation r ON r.info_id = m.info_id
+WHERE r.movie_date REGEXP '^2025-(01-(0[1-9]|1[0-6]))$'  -- 2025-01-01 ~ 2025-01-16 날짜 범위
+GROUP BY m.title
+ORDER BY reservation_count DESC
+LIMIT 1;
+
+```
+
+</details>
+
+
 
 ### 5. 특정 영화관 문제로 상영을 할 수 없게 되었다, 해당 날짜, 영화관 예매한 예매자 정보 출력(영화관 정보는 대소문자 구분 없이 검색)
 
@@ -89,6 +147,27 @@
 
 ![image](https://github.com/user-attachments/assets/33307735-7b3e-48e0-82d1-5bba5be263cd)
 
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT 
+    m.name,  -- 예매자 이름
+    m.phone,  -- 예매자 연락처
+    mi.title,  -- 영화 제목
+    ri.movie_date,  -- 영화 상영 날짜
+    ri.theater  -- 영화관 이름
+FROM movie_reservation ri
+JOIN movie_info mi ON ri.info_id = mi.info_id
+JOIN user m ON ri.user_id = m.user_id
+WHERE ri.theater = 'CGV 강남' 
+  AND ri.movie_date REGEXP '^2025-01-16$';  -- 특정 날짜
+
+```
+
+</details>
+
 
 ### 6. 예매 취소 공지를 위한 사용자 검색
 
@@ -96,6 +175,21 @@
 - 출력 예시
 
 ![image](https://github.com/user-attachments/assets/55ffa76b-979f-4b6b-8be9-8862804e6ef4)
+
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT user_id, name, birthday,
+       REGEXP_SUBSTR(birthday, '^[0-9]{4}') AS year
+FROM user
+WHERE CAST(REGEXP_SUBSTR(birthday, '^[0-9]{4}') AS UNSIGNED) >= YEAR(CURDATE()) - 19;
+
+```
+
+</details>
+
 
 ### 7. 영화 서비스 이슈 공지
 
@@ -106,6 +200,19 @@
 
 ![image](https://github.com/user-attachments/assets/c763de89-eba2-4cab-979e-0edaacfe6ff2)
 
+<details>
+<summary>예시 답안</summary>
+  
+```sql
+
+SELECT user_id, name, email, phone
+FROM user
+WHERE email REGEXP 'nate\\.com$' -- 이메일이 nate.com으로 끝나는 경우
+   OR phone REGEXP '^[0-9]{3}-[0-9]{3}-[0-9]{4}$'; -- 전화번호 중간 자릿수가 3자리
+
+```
+
+</details>
 
 
 ## 📝 프로젝트 후기

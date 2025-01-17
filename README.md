@@ -263,33 +263,35 @@ WHERE email REGEXP 'nate\\.com$' -- 이메일이 nate.com으로 끝나는 경우
    
    * sudo mysql -u root -p 접속 후 db 생성
      
-     ![image](https://github.com/user-attachments/assets/e3191b85-4a8c-4768-ae25-050df161aed5)
-   
+     ![image](https://github.com/user-attachments/assets/2f5e6e3e-a318-4579-aec1-c0bd14aaa443)
+
    * test 계정 생성 후 원격에서 접속할 수 있도록 설정
    
-     ![image](https://github.com/user-attachments/assets/1abe8468-3234-46e8-9c63-39f420693de4)
+     ![image](https://github.com/user-attachments/assets/f8e9c17a-4aa0-4b97-9a76-9f9408c3ed90)
+
+
 
 3. 외부 접속 허용 설정
    
    * mysql 접속 해제 후 mysql 설정 파일(mysql.cnf) 열기
 
-     ![image](https://github.com/user-attachments/assets/d9a0340a-25cc-4e29-b5a0-c9cc7fad49ec)
+     ![image](https://github.com/user-attachments/assets/25796a7b-4c96-4312-a3a8-9c1a04700fdd)
 
    * mysqld.cnf 의 bind-address 수정을 통해 모든 IP 접속 허용
 
-     ![image](https://github.com/user-attachments/assets/30b54593-166f-42b3-b9f0-129b8c6ff640)
+     ![image](https://github.com/user-attachments/assets/79eb65a9-9030-4d4f-8dae-d161a316b825)
 
    * Virtual Machine 네트워크 설정에서 브릿지 모드로 변경
 
-     ![image](https://github.com/user-attachments/assets/4377e57d-475b-48a3-a442-53f98f3469fc)
+     ![image](https://github.com/user-attachments/assets/36fe3f7d-6123-40ea-aa3f-20f964fe5b9d)
 
    * ifconfig 로 가상 머신의 ip 확인
 
-     ![image](https://github.com/user-attachments/assets/c195a95a-e9fa-4c08-9b1d-d5ed50d27787)
+     ![image](https://github.com/user-attachments/assets/2aefdb98-7093-4467-b4e0-d287108de994)
 
    * dbeaver 로 연결 확인
 
-     ![image](https://github.com/user-attachments/assets/f8dbe54a-29db-4aa3-9354-680406a2d8a0)
+     ![image](https://github.com/user-attachments/assets/f2647e72-e16d-4aee-9f39-9375c48e8fbb)
 
 ## 📝 프로젝트 후기
 

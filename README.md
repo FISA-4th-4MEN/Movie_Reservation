@@ -60,11 +60,7 @@
 
 ## **🚀 활용 기술**
 
-<img src="https://img.shields.io/badge/VirtualBox-BE3939?style=for-the-badge&logo=VirtualBox&logoColor=white">
-<img src="https://img.shields.io/badge/MobaxTerm-00B14F?style=for-the-badge&logo=MobaxTerm&logoColor=white">
-<img src="https://img.shields.io/badge/Linux-23C8D2?style=for-the-badge&logo=Linux&logoColor=white">
-<img src="https://img.shields.io/badge/DBeaver-293239?style=for-the-badge&logo=DBeaver&logoColor=white">
-<img src="https://img.shields.io/badge/MySQL-855DCD?style=for-the-badge&logo=MySQL&logoColor=white">
+<img src="https://img.shields.io/badge/VirtualBox-BE3939?style=for-the-badge&logo=VirtualBox&logoColor=white"> <img src="https://img.shields.io/badge/MobaxTerm-00B14F?style=for-the-badge&logo=MobaxTerm&logoColor=white"> <img src="https://img.shields.io/badge/Linux-23C8D2?style=for-the-badge&logo=Linux&logoColor=white"> <img src="https://img.shields.io/badge/DBeaver-293239?style=for-the-badge&logo=DBeaver&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-855DCD?style=for-the-badge&logo=MySQL&logoColor=white">
 
 ## 📊ERD
 

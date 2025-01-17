@@ -287,7 +287,7 @@ WHERE email REGEXP 'nate\\.com$' -- 이메일이 nate.com으로 끝나는 경우
 
    * ifconfig 로 가상 머신의 ip 확인
 
-     ![image](https://github.com/user-attachments/assets/2aefdb98-7093-4467-b4e0-d287108de994)
+     ![image](https://github.com/user-attachments/assets/5adac4a7-5173-43a8-8b9f-462fa4c72a44)
 
    * dbeaver 로 연결 확인
 

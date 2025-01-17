@@ -73,6 +73,18 @@
 
 🗃️ MySQL
 
+
+## 📊ERD
+
+![image](https://github.com/user-attachments/assets/b8f358a5-03e1-470a-a5b1-10a962c2bbf7)
+
+
+### table 상세
+
+- user: 회원 정보를 갖는 table
+- movie_info: 영화 정보를 갖는 table
+- movie_reservation: 영화 예매 정보를 갖는 table
+
 ---
 
 ## 🔍문제
